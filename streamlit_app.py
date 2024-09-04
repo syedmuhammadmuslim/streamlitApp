@@ -15,7 +15,7 @@ model = joblib.load('K-Nearest Neighborsmodel.pkl')  # Ensure this is the model,
 with open('accuracy.txt', 'r') as file:
     accuracy = file.read()
 
-st.title("Model Accuracy and Real-Time Prediction new title")
+st.title("Model Accuracy and Real-Time Prediction")
 st.write(f"Model {accuracy}")
 
 # User input for real-time prediction
