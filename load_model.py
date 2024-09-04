@@ -1,10 +1,8 @@
 import pandas as pd
-import pickle
+import joblib
 from sklearn.metrics import accuracy_score
 
-# Load the pre-trained model
-with open('K-Nearest Neighbors Accuracy.pkl', 'rb') as file:
-    model = pickle.load(file)
+model = joblib.load('K-Nearest Neighborsmodel.pkl')  # Ensure this is the model, not data
 
 # Load the test data
 test_data = pd.read_csv('mobile_price_range_data.csv')
@@ -20,7 +18,7 @@ y_pred = model.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
 
 # Save accuracy to a file
-with open('accuracy.txt', 'w') as file:
-    file.write(f'Accuracy: {accuracy}')
+# with open('accuracy.txt', 'w') as file:
+#     file.write(f'Accuracy: {accuracy}')
 
 print(f'Accuracy: {accuracy}')
