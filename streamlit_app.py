@@ -16,7 +16,7 @@ with open('accuracy.txt', 'r') as file:
     accuracy = file.read()
 
 st.title("Model Accuracy and Real-Time Prediction")
-st.write(f"Model Accuracy: {accuracy}")
+st.write(f"Model {accuracy}")
 
 # User input for real-time prediction
 st.header("Real-Time Prediction")
