@@ -18,7 +18,7 @@ y_pred = model.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
 
 # Save accuracy to a file
-# with open('accuracy.txt', 'w') as file:
-#     file.write(f'Accuracy: {accuracy}')
+with open('accuracy.txt', 'w') as file:
+    file.write(f'Accuracy: {accuracy}')
 
 print(f'Accuracy: {accuracy}')
