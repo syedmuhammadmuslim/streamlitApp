@@ -30,8 +30,8 @@ y_test = test_data.iloc[:, -1]
 
 # Assume the model expects the same input features as X_test
 input_data = []
-for col in range(len(X_test.columns)):
-    input_value = st.number_input(f"Input for feature {col + 1}", value=0.0)
+for col in X_test.columns:
+    input_value = st.number_input(f"Input for {col}", value=0.0)
     input_data.append(input_value)
 
 # Convert to DataFrame for prediction
